@@ -13,6 +13,15 @@ class MarketMonitorServiceProvider extends AbstractSeatPlugin
         $this->loadViewsFrom(__DIR__ . '/resources/views', 'marketmonitor');
     }
 
+    public function register(){
+        $this->mergeConfigFrom(__DIR__ . '/Config/marketmonitor.sidebar.php', 'package.sidebar');
+
+        $this->registerPermissions(
+            __DIR__ . '/Config/marketmonitor.permissions.php',
+            'marketmonitor'
+        );
+    }
+
     /**
      * Return the plugin public name as it should be displayed into settings.
      *

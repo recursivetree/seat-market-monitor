@@ -61,7 +61,7 @@ class MarketPricesDataTable extends DataTable
     {
         return [
             ['data' => 'type.typeName', 'title' => trans_choice('web::seat.type', 2), 'orderable' => false],
-            ['data' => 'character.name', 'title' => trans('web::seat.character')],
+            ['data' => 'character.name', 'title' => trans_choice('web::seat.character',1)],
             ['data' => 'price', 'title' => trans('web::seat.price')],
             ['data' => 'sell_price', 'title' => "Sell Price (Default Market Region)"],
             ['data' => 'percentage', 'title' => "Percentage"],
