@@ -1,0 +1,33 @@
+{
+  "name": "recursivetree/seat-market-monitor",
+  "description": "A tool to monitor market prices",
+  "license": "GPL-2.0",
+  "type": "seat-plugin",
+  "authors": [
+    {
+      "name": "recursivetree",
+      "email": "recursivetreemail@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "RecursiveTree\\Seat\\MarketMonitor\\": "src/"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "php": "^8.2",
+    "laravel/framework": "^10.0",
+    "eveseat/web": "^5.0",
+    "eveseat/eveapi": "^5.0",
+    "eveseat/services": "^5.0.1",
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "RecursiveTree\\Seat\\MarketMonitor\\MarketMonitorServiceProvider"
+      ]
+    }
+  }
+}
