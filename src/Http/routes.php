@@ -11,4 +11,9 @@ Route::group([
         'as' => 'marketmonitor::table',
         'uses' => 'MarketMonitorController@index',
     ]);
+
+    Route::get('/locations', [
+        'as' => 'marketmonitor::locations',
+        'uses' => 'MarketMonitorController@getLocations',
+    ]);
 });
